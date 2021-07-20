@@ -17,17 +17,6 @@ pipeline {
                 }
              }
         }
-        
-       stage('Test image') {
-           agent any
-           steps {
-              script {
-                sh '''
-                    curl http://192.168.1.12:8929 | grep -q "Laravel"
-                '''
-              }
-           }
-      }
       
      stage('Push image in staging and deploy it') {
        when {
