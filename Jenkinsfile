@@ -23,7 +23,7 @@ pipeline {
            steps {
               script {
                 sh '''
-                    curl http://localhost | grep -q "Laravel"
+                    curl http://192.168.1.12:8929 | grep -q "Laravel"
                 '''
               }
            }
